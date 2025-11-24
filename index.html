@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Графикалық Редакторлар Тесті</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div id="main-menu">
+        <h1>🎨 Графикалық Редакторлар Тесті</h1>
+        <p style="text-align: center;">Қажетті тест режимін таңдаңыз:</p>
+        <button class="choice-button" onclick="startTest(136)">1. Барлық 136 сұраққа жауап беру</button>
+        <button class="choice-button" onclick="startRandomTest(30)">2. Кездейсоқ 30 сұраққа жауап беру</button>
+    </div>
+
+    <div id="topic-selection" style="display: none;">
+        <h2>📚 Тақырыпты таңдау (136 сұрақ)</h2>
+        <p>Қай бөлім бойынша тест тапсырғыңыз келеді?</p>
+        <button class="choice-button" onclick="startTopicTest('Krita', 1, 25)">1. Krita (25 сұрақ)</button>
+        <button class="choice-button" onclick="startTopicTest('GIMP', 26, 55)">2. GIMP (30 сұрақ)</button>
+        <button class="choice-button" onclick="startTopicTest('Adobe Photoshop', 56, 80)">3. Adobe Photoshop (25 сұрақ)</button>
+        <button class="choice-button" onclick="startTopicTest('Tinkercad & 3D Модельдеу', 81, 105)">4. Tinkercad & 3D Модельдеу (25 сұрақ)</button>
+        <button class="choice-button" onclick="startTopicTest('SketchUp & 3D Басып шығару', 106, 136)">5. SketchUp & 3D Басып шығару (31 сұрақ)</button>
+        <hr>
+        <button class="choice-button" onclick="showMainMenu()">🏠 Басты мәзірге оралу</button>
+    </div>
+
+    <div id="test-area" style="display: none;">
+        <h2 id="test-title">Тест</h2>
+        <form id="quiz-form"></form>
+        <button class="submit-button" onclick="submitTest()">✅ Тестті аяқтау және нәтижелерді көру</button>
+        <hr>
+        <button class="choice-button" onclick="showMainMenu()">🏠 Басты мәзірге оралу</button>
+    </div>
+
+    <div id="results-area" style="display: none;">
+        <h2>🏆 Тест нәтижелері</h2>
+        <div id="summary" class="result-section"></div>
+        <div id="details"></div>
+        <hr>
+        <button class="choice-button" onclick="showMainMenu()">🏠 Басты мәзірге оралу</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
